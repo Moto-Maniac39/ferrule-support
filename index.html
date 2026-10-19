@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ferrule Support</title>
+<meta name="description" content="Help and support for Ferrule, the bottomless notebook for iPad and Apple Pencil.">
+<style>
+  :root {
+    --paper: #fdf6c9;
+    --ink: #24231f;
+    --muted: #5d5a4e;
+    --rule: rgba(84, 140, 204, 0.28);
+    --margin: #e0544f;
+    --card: #fffdf3;
+    --border: rgba(36, 35, 31, 0.14);
+    --binding: #6f1a28;
+    --link: #1f5fae;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper: #1d1c19;
+      --ink: #f1eee3;
+      --muted: #b8b3a4;
+      --rule: rgba(120, 160, 220, 0.16);
+      --margin: #c9524d;
+      --card: #262521;
+      --border: rgba(241, 238, 227, 0.14);
+      --binding: #4d1320;
+      --link: #8fb8f0;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    color: var(--ink);
+    background-color: var(--paper);
+    background-image: repeating-linear-gradient(to bottom, transparent 0 31px, var(--rule) 31px 32px);
+    font: 17px/1.6 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  .binding { height: 28px; background: var(--binding); }
+  .page {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 40px 20px 64px 44px;
+    border-left: 2px solid var(--margin);
+    min-height: calc(100vh - 28px);
+    background: transparent;
+  }
+  header { margin-bottom: 32px; }
+  .brand { display: flex; align-items: center; gap: 16px; }
+  .cover {
+    width: 54px; height: 70px; flex: none; border-radius: 4px;
+    background:
+      radial-gradient(circle at 20% 30%, #fff 0 2px, transparent 3px),
+      radial-gradient(circle at 65% 20%, #fff 0 1.5px, transparent 2.5px),
+      radial-gradient(circle at 40% 70%, #fff 0 2px, transparent 3px),
+      radial-gradient(circle at 80% 60%, #fff 0 1.5px, transparent 2.5px),
+      radial-gradient(circle at 30% 50%, #ddd 0 1px, transparent 2px),
+      #141416;
+    background-size: 14px 14px, 11px 11px, 17px 17px, 13px 13px, 9px 9px, auto;
+    box-shadow: inset 7px 0 0 #000, 0 3px 8px rgba(0,0,0,.25);
+    position: relative;
+  }
+  .cover::after {
+    content: ""; position: absolute; left: 14px; right: 6px; top: 14px; height: 18px;
+    background: #faf8f0; border: 1.5px solid #000; border-radius: 3px;
+  }
+  h1 { font-size: 2.1rem; line-height: 1.15; margin: 0; letter-spacing: -0.01em; }
+  .tagline { margin: 4px 0 0; color: var(--muted); }
+  h2 { font-size: 1.3rem; margin: 40px 0 12px; }
+  h3 { font-size: 1.05rem; margin: 0 0 6px; }
+  p { margin: 0 0 14px; }
+  a { color: var(--link); }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 18px 20px;
+    margin: 0 0 14px;
+  }
+  .contact { font-size: 1.05rem; }
+  .placeholder { background: rgba(224, 84, 79, 0.15); border-radius: 4px; padding: 0 4px; }
+  ul { padding-left: 1.2em; margin: 0 0 14px; }
+  li { margin-bottom: 4px; }
+  footer { margin-top: 48px; color: var(--muted); font-size: 0.9rem; }
+  footer a { color: inherit; }
+  @media (max-width: 520px) {
+    .page { padding: 28px 16px 48px 24px; }
+    h1 { font-size: 1.7rem; }
+  }
+</style>
+</head>
+<body>
+<div class="binding"></div>
+<main class="page">
+  <header>
+    <div class="brand">
+      <div class="cover" aria-hidden="true"></div>
+      <div>
+        <h1>Ferrule Support</h1>
+        <p class="tagline">Bottomless notebooks for iPad and Apple Pencil.</p>
+      </div>
+    </div>
+  </header>
+
+  <section>
+    <h2>Contact</h2>
+    <div class="card contact">
+      <p>Questions, bug reports or ideas? Email
+        <a href="mailto:smartphowner@yahoo.com">smartphowner@yahoo.com</a>.
+      </p>
+      <p>It helps to include your iPad model, your iPadOS version, and Ferrule's version
+        (shown in the App Store or TestFlight). Screenshots are always welcome.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Common questions</h2>
+
+    <div class="card">
+      <h3>How do I back up my notes?</h3>
+      <p>In the sidebar, tap the <strong>gear</strong> button, then <strong>Export All Notes</strong>. Save the
+        backup file somewhere safe, like iCloud Drive in the Files app. To restore, tap the gear, then
+        <strong>Import Notes</strong> and choose your backup. Importing only adds pages you don't already
+        have; it never deletes anything.</p>
+    </div>
+
+    <div class="card">
+      <h3>I deleted Ferrule. Can I get my notes back?</h3>
+      <p>Only from a backup. Your notes live on your iPad, so deleting the app deletes them too. We recommend
+        exporting a backup now and then.</p>
+    </div>
+
+    <div class="card">
+      <h3>Why doesn't my finger draw?</h3>
+      <p>By default, only Apple Pencil writes and your fingers scroll, so your palm never leaves stray marks.
+        To draw with a finger, open the tool panel (the round button in the corner) and turn on
+        <strong>Finger Drawing</strong>.</p>
+    </div>
+
+    <div class="card">
+      <h3>What gestures are there?</h3>
+      <ul>
+        <li><strong>Two-finger tap:</strong> undo</li>
+        <li><strong>Three-finger tap:</strong> redo</li>
+        <li><strong>Three-finger swipe:</strong> turn to the next or previous page. Swipe past the last page to start a new one.</li>
+        <li><strong>Pinch:</strong> zoom in on a page</li>
+        <li><strong>Apple Pencil double-tap or squeeze:</strong> follows your choice in iPad Settings → Apple Pencil</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>How do I add and edit pictures?</h3>
+      <p>Open the tool panel and choose <strong>Photos</strong>, <strong>Camera</strong>, <strong>Files</strong> or
+        <strong>Paste</strong> under Insert Picture, or drag a picture in from another app. Tap a picture with
+        your finger to select it, then drag, resize or rotate it with its handles. The toolbar at the top has
+        crop, colors, borders, layering and more.</p>
+    </div>
+
+    <div class="card">
+      <h3>How do I write on a PDF?</h3>
+      <p>Inside a notebook, tap the <strong>Import PDF</strong> button in the sidebar and pick a PDF from Files.
+        It becomes a page you can write on. Use <strong>Share → Share as PDF</strong> to send it with your
+        writing included.</p>
+    </div>
+
+    <div class="card">
+      <h3>The Camera button is missing.</h3>
+      <p>The camera option only appears on iPads with a camera. If you said no when Ferrule asked for camera
+        access, you can turn it back on in iPad Settings → Ferrule.</p>
+    </div>
+
+    <div class="card">
+      <h3>Does Ferrule collect my data?</h3>
+      <p>No. There's no account, no ads and no tracking, and your notes stay on your iPad.
+        See the <a href="privacy.html">Privacy Policy</a>.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 A.D. Alves · <a href="privacy.html">Privacy Policy</a></p>
+  </footer>
+</main>
+</body>
+</html>
